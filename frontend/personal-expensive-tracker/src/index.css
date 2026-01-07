@@ -1,0 +1,80 @@
+/* ---------------- IMPORTS ---------------- */
+
+/* Import Google Fonts: Comic Relief, Quicksand, and Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Import TailwindCSS utilities */
+@import "tailwindcss";
+
+/* ---------------- THEME VARIABLES ---------------- */
+@theme {
+  --font-display: "Roboto", sans-serif; /* Default font for the app */
+  --breakpoint-3xl: 1920px;           /* Custom breakpoint for 3XL screens */
+
+  /* Primary green color used throughout the app */
+  --color-primary: #22c55e;
+}
+
+/* ---------------- BASE STYLES ---------------- */
+@layer base {
+  html {
+    font-family: var(--font-display); /* Apply default font to the entire HTML */
+  }
+
+  body {
+    background-color: #f6fdf8; /* Light green background for the app */
+    overflow-x: hidden;         /* Prevent horizontal scroll */
+  }
+}
+
+/* ---------------- INPUT STYLES ---------------- */
+.input-box {
+  @apply w-full flex justify-between gap-3 text-sm text-black
+  bg-green-50 rounded px-4 py-3 mb-4 mt-3
+  border border-green-200 outline-none
+  focus:border-green-500; /* Input box with padding, rounded corners, and green focus */
+}
+
+/* ---------------- BUTTON STYLES ---------------- */
+.btn-primary {
+  @apply w-full text-sm font-medium text-white
+  bg-green-500 shadow-lg shadow-green-600/10
+  p-[10px] rounded-md my-1
+  hover:bg-green-600 transition; /* Primary button with hover and shadow effects */
+}
+
+/* ---------------- CARD STYLES ---------------- */
+.card {
+  @apply bg-white p-6 rounded-2xl
+  shadow-md shadow-green-100
+  border border-green-200/60; /* White card with padding, rounded corners, and soft shadow */
+}
+
+/* ---------------- CARD BUTTON STYLES ---------------- */
+.card-btn {
+  @apply flex items-center gap-3 text-[12px] font-medium text-green-700
+  bg-green-50 hover:bg-green-100
+  px-4 py-1.5 rounded-lg
+  border border-green-200
+  cursor-pointer; /* Small button for cards, changes color on hover */
+}
+
+/* ---------------- ADD BUTTON STYLES ---------------- */
+.add-btn {
+  @apply flex items-center gap-1.5 text-xs md:text-sm
+  font-medium text-green-600
+  whitespace-nowrap
+  bg-green-50 border border-green-200
+  rounded-lg px-4 py-2
+  cursor-pointer; /* Generic add button with green styling */
+}
+
+/* Red (Expense) Button Variant */
+.add-btn-danger {
+  @apply text-red-600 bg-red-50 border border-red-200 hover:bg-red-100; /* For delete/expense buttons */
+}
+
+/* Filled Add Button */
+.add-btn-fill {
+  @apply text-white bg-green-500 hover:bg-green-600; /* Green filled button with hover effect */
+}
