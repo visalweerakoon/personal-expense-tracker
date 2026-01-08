@@ -2,10 +2,6 @@
 backend/node_modules/
 frontend/personal-expensive-tracker/node_modules/
 
-# Environment variables
-backend/.env
-frontend/personal-expensive-tracker/.env
-
 # Build folders
 frontend/personal-expensive-tracker/dist/
 frontend/personal-expensive-tracker/build/
